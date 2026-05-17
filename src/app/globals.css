@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d1117;
+  --color-foreground: #c9d1d9;
+  
+  --color-card-bg: #161b22;
+  --color-card-hover: #21262d;
+  
+  --color-border-github: #30363d;
+  --color-border-hover: #8b949e;
+  
+  --color-text-muted: #8b949e;
+  --color-accent-blue: #58a6ff;
+  --color-accent-green: #238636;
+  --color-accent-green-hover: #2ea44f;
+  
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbars matching GitHub style */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b949e;
+}
+
+/* Custom 15-column grid for neural-network contributions grid */
+.grid-cols-15 {
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+}
+
+
