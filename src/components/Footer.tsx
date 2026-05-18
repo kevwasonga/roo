@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Compass, ShieldAlert, FileCode } from "lucide-react";
+import { Mail, FileCode } from "lucide-react";
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -43,18 +43,18 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-background border-t border-border-github py-12 mt-auto">
+    <footer className="bg-dark border-t border-gold/30 py-12 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           
           {/* Logo and description */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-2 mb-2">
-              <span className="font-mono font-bold text-base text-foreground">
-                RODRICKS.O <span className="text-accent-blue">/</span> DATA
+              <span className="font-serif font-bold text-base text-white">
+                RODRICKS.O <span className="text-gold">/</span> DATA
               </span>
             </div>
-            <p className="text-xs text-text-muted max-w-md font-mono">
+            <p className="text-xs text-gray-400 max-w-md font-sans">
               Leveraging advanced analytics, machine learning, and predictive modeling to unlock insights and drive data-informed decisions.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-lg bg-card-bg border border-border-github text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-dark-3 border border-dark-3 text-gray-400 hover:text-gold hover:border-gold transition-all"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -76,21 +76,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="border-border-github my-8" />
+        <hr className="border-gold/20 my-8" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-text-muted font-mono">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-gray-400 font-sans">
             <span>© {currentYear} Rodricks Otieno Ochieng. All rights reserved.</span>
-            <span className="hidden md:inline text-border-github">|</span>
+            <span className="hidden md:inline text-dark-3">|</span>
             <span className="flex items-center gap-1">
               <FileCode className="w-3.5 h-3.5" /> Built with React 19 & Tailwind 4
             </span>
           </div>
 
-          <div className="flex gap-4 text-xs font-mono text-text-muted">
-            <Link href="#about" className="hover:text-foreground transition-colors">About</Link>
-            <Link href="#projects" className="hover:text-foreground transition-colors">Projects</Link>
-            <Link href="#contact" className="hover:text-foreground transition-colors">Contact</Link>
+          <div className="flex gap-4 text-xs font-sans text-gray-400">
+            <Link href="#about" className="hover:text-white transition-colors">About</Link>
+            <Link href="#projects" className="hover:text-white transition-colors">Projects</Link>
+            <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
       </div>
