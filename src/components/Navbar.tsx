@@ -32,7 +32,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border-github py-3"
+          ? "bg-dark/90 backdrop-blur-md border-b border-gold/30 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -40,15 +40,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-card-bg border border-border-github text-accent-blue shadow-inner group-hover:border-accent-blue transition-colors">
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-dark-3 border border-gold/30 text-gold shadow-inner group-hover:border-gold transition-colors">
                 <BarChart3 className="w-5 h-5 absolute group-hover:scale-110 transition-transform" />
-                <Database className="w-3 h-3 absolute -top-1 -right-1 text-accent-green" />
+                <Database className="w-3 h-3 absolute -top-1 -right-1 text-green" />
               </div>
               <div className="flex flex-col">
-                <span className="font-mono font-bold text-lg leading-tight tracking-tight text-foreground group-hover:text-accent-blue transition-colors">
+                <span className="font-serif font-bold text-lg leading-tight tracking-tight text-white group-hover:text-gold transition-colors">
                   RODRICKS.O
                 </span>
-                <span className="text-[10px] text-text-muted font-mono leading-none">
+                <span className="text-[10px] text-text-muted font-sans leading-none">
                   DATA SCIENTIST
                 </span>
               </div>
@@ -62,7 +62,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="px-3 py-2 text-sm font-medium font-mono text-text-muted hover:text-foreground transition-colors rounded-md hover:bg-card-bg/50"
+                  className="px-3 py-2 text-sm font-medium font-sans text-text-muted hover:text-white transition-colors rounded-md hover:bg-dark-3"
                 >
                   {link.name}
                 </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
             </div>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-accent-green hover:bg-accent-green-hover border border-border-github rounded-md transition-all shadow-sm hover:shadow-accent-green/20"
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-dark bg-gold hover:bg-gold-light border border-gold/50 rounded-md transition-all shadow-sm"
             >
               Get In Touch
             </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-foreground hover:bg-card-bg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue border border-border-github"
+              className="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-white hover:bg-dark-3 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold border border-dark-3"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -90,13 +90,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border-github px-2 pt-2 pb-4 space-y-1 sm:px-3">
+        <div className="md:hidden bg-dark/95 backdrop-blur-lg border-b border-gold/30 px-2 pt-2 pb-4 space-y-1 sm:px-3">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block px-3 py-3 rounded-md text-base font-medium font-mono text-text-muted hover:text-foreground hover:bg-card-bg"
+              className="block px-3 py-3 rounded-md text-base font-medium font-sans text-text-muted hover:text-white hover:bg-dark-3"
             >
               {link.name}
             </Link>
@@ -105,7 +105,7 @@ export default function Navbar() {
             <Link
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center px-4 py-3 text-base font-semibold text-white bg-accent-green hover:bg-accent-green-hover border border-border-github rounded-md transition-all"
+              className="block w-full text-center px-4 py-3 text-base font-semibold text-dark bg-gold hover:bg-gold-light border border-gold/50 rounded-md transition-all"
             >
               Get In Touch
             </Link>
