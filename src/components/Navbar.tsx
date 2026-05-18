@@ -32,23 +32,23 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-dark/90 backdrop-blur-md border-b border-gold/30 py-3"
-          : "bg-transparent py-5"
+          ? "bg-dark/90 backdrop-blur-md border-b border-gold/30 py-2 sm:py-3"
+          : "bg-transparent py-3 sm:py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-dark-3 border border-gold/30 text-gold shadow-inner group-hover:border-gold transition-colors">
-                <BarChart3 className="w-5 h-5 absolute group-hover:scale-110 transition-transform" />
-                <Database className="w-3 h-3 absolute -top-1 -right-1 text-green" />
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
+          <div className="flex items-center min-w-0">
+            <Link href="/" className="flex items-center gap-1.5 sm:gap-2 group shrink-0">
+              <div className="relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-dark-3 border border-gold/30 text-gold shadow-inner group-hover:border-gold transition-colors">
+                <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 absolute group-hover:scale-110 transition-transform" />
+                <Database className="w-2 h-2 sm:w-3 sm:h-3 absolute -top-1 -right-1 text-green" />
               </div>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-lg leading-tight tracking-tight text-white group-hover:text-gold transition-colors">
+              <div className="flex flex-col min-w-0">
+                <span className="font-serif font-bold text-sm sm:text-lg leading-tight tracking-tight text-white group-hover:text-gold transition-colors truncate">
                   RODRICKS.O
                 </span>
-                <span className="text-[10px] text-text-muted font-sans leading-none">
+                <span className="text-[8px] sm:text-[10px] text-text-muted font-sans leading-none">
                   DATA SCIENTIST
                 </span>
               </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-dark/95 backdrop-blur-lg border-b border-gold/30 px-2 pt-2 pb-4 space-y-1 sm:px-3">
+        <div className="md:hidden bg-dark/95 backdrop-blur-lg border-b border-gold/30 px-3 pt-2 pb-6 space-y-1">
           {navLinks.map((link) => (
             <Link
               key={link.name}
