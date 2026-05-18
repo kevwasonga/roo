@@ -128,7 +128,7 @@ function HeatmapGrid() {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border-github bg-background min-h-[90vh] flex items-center py-20">
+    <section className="relative overflow-hidden border-b border-border-github bg-background min-h-[80vh] md:min-h-[90vh] flex items-center py-12 md:py-20">
       <BarChart />
       <LineChart />
       <ScatterCluster />
@@ -139,52 +139,52 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card-bg border border-border-github text-gold text-xs font-sans mb-6">
-            <BarChart3 className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card-bg border border-border-github text-gold text-xs font-sans mb-4 sm:mb-6">
+            <BarChart3 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             <span>Data Science &amp; AI Engineering</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-none font-serif mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-none font-serif mb-3 sm:mb-4">
             Turning Complex Data Into
-            <br />
+            <br className="hidden xs:inline" />
             <span className="text-gold">Intelligent Decisions</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto mb-8">
+          <p className="text-sm sm:text-lg text-text-muted max-w-2xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
             From raw datasets to production-grade ML pipelines — architecting scalable systems that
             uncover insights, predict outcomes, and drive measurable impact.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
             <Link
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-dark bg-gold hover:bg-gold-light border border-gold/50 rounded-md transition-all shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-dark bg-gold hover:bg-gold-light border border-gold/50 rounded-md transition-all shadow-md"
             >
               Explore Projects <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-foreground bg-card-bg hover:bg-card-hover border border-border-github rounded-md transition-all"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-foreground bg-card-bg hover:bg-card-hover border border-border-github rounded-md transition-all"
             >
               <Layers className="w-4 h-4" /> Start a Project
             </Link>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mt-14 pt-8 border-t border-border-github/60 max-w-lg mx-auto">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-border-github/60 max-w-lg mx-auto">
             <div>
-              <p className="text-2xl sm:text-3xl font-bold text-foreground font-serif">5+</p>
-              <p className="text-xs text-text-muted font-sans uppercase tracking-wider">Years in Production ML</p>
+              <p className="text-xl sm:text-3xl font-bold text-foreground font-serif">5+</p>
+              <p className="text-[10px] sm:text-xs text-text-muted font-sans uppercase tracking-wider">Years in Production ML</p>
             </div>
             <div>
-              <p className="text-2xl sm:text-3xl font-bold text-foreground font-serif">50M+</p>
-              <p className="text-xs text-text-muted font-sans uppercase tracking-wider">Data Points Processed</p>
+              <p className="text-xl sm:text-3xl font-bold text-foreground font-serif">50M+</p>
+              <p className="text-[10px] sm:text-xs text-text-muted font-sans uppercase tracking-wider">Data Points Processed</p>
             </div>
             <div>
               <div className="flex items-center justify-center gap-1">
-                <TrendingUp className="w-5 h-5 text-green" />
-                <p className="text-2xl sm:text-3xl font-bold text-foreground font-serif">22%</p>
+                <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-green" />
+                <p className="text-xl sm:text-3xl font-bold text-foreground font-serif">22%</p>
               </div>
-              <p className="text-xs text-text-muted font-sans uppercase tracking-wider">Avg. Performance Gain</p>
+              <p className="text-[10px] sm:text-xs text-text-muted font-sans uppercase tracking-wider">Avg. Performance Gain</p>
             </div>
           </div>
         </div>
