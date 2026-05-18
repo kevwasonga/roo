@@ -44,7 +44,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 border-b border-border-github bg-background relative">
+    <section id="experience" className="py-16 md:py-24 border-b border-border-github bg-background relative">
       <div className="absolute bottom-10 right-10 w-[25rem] h-[25rem] bg-gold/5 rounded-full blur-[110px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,17 +64,17 @@ export default function Experience() {
         </div>
 
         {/* Timeline */}
-        <div className="relative border-l-2 border-border-github pl-6 ml-4 sm:ml-8 space-y-12">
+        <div className="relative border-l-2 border-border-github pl-5 sm:pl-6 ml-3 sm:ml-8 space-y-10 sm:space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="relative group">
               
               {/* Timeline dot */}
-              <div className="absolute -left-[35px] top-1.5 w-6 h-6 rounded-full bg-card-bg border-2 border-border-github group-hover:border-gold flex items-center justify-center transition-colors">
-                <div className="w-2.5 h-2.5 rounded-full bg-border-github group-hover:bg-gold transition-colors" />
+              <div className="absolute -left-[27px] sm:-left-[35px] top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-card-bg border-2 border-border-github group-hover:border-gold flex items-center justify-center transition-colors">
+                <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-border-github group-hover:bg-gold transition-colors" />
               </div>
 
               {/* Box */}
-              <div className="p-6 bg-card-bg border border-border-github hover:border-gold rounded-xl transition-all duration-300">
+              <div className="p-4 sm:p-6 bg-card-bg border border-border-github hover:border-gold rounded-xl transition-all duration-300">
                 
                 {/* Meta details */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
