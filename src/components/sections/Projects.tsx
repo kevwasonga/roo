@@ -84,7 +84,7 @@ export default function Projects() {
     : projects.filter(p => p.category === activeFilter);
 
   return (
-    <section id="projects" className="py-24 border-b border-border-github bg-background relative">
+    <section id="projects" className="py-16 md:py-24 border-b border-border-github bg-background relative">
       <div className="absolute top-10 left-10 w-[20rem] h-[20rem] bg-green/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,14 +130,14 @@ export default function Projects() {
               className="flex flex-col bg-card-bg border border-border-github hover:border-gold/40 rounded-xl p-6 transition-all duration-300 group hover:shadow-lg"
             >
               {/* Card Header (GitHub Repo Style) */}
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-2 max-w-[70%]">
+              <div className="flex items-start justify-between mb-3 gap-2">
+                <div className="flex items-center gap-2 min-w-0 flex-1">
                   <FolderGit2 className="w-4 h-4 text-text-muted group-hover:text-gold transition-colors flex-shrink-0" />
-                  <h3 className="text-base font-bold font-mono text-foreground group-hover:text-gold transition-colors truncate">
+                  <h3 className="text-sm sm:text-base font-bold font-mono text-foreground group-hover:text-gold transition-colors truncate">
                     {project.title}
                   </h3>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-shrink-0">
                   <span className="px-2 py-0.5 text-[10px] font-mono text-text-muted bg-cream-2 border border-border-github rounded-full">
                     Public
                   </span>
@@ -173,18 +173,18 @@ export default function Projects() {
               </div>
 
               {/* Card Footer (GitHub Repo Stats Style) */}
-              <div className="flex items-center justify-between border-t border-border-github/60 pt-4 mt-auto">
-                <div className="flex items-center gap-4 text-xs font-mono text-text-muted">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border-github/60 pt-4 mt-auto">
+                <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs font-mono text-text-muted">
                   <div className="flex items-center gap-1.5">
-                    <div className={`w-2.5 h-2.5 rounded-full ${project.color}`} />
-                    <span>{project.category}</span>
+                    <div className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full ${project.color}`} />
+                    <span className="hidden xs:inline">{project.category}</span>
                   </div>
                   <div className="flex items-center gap-1 hover:text-foreground transition-colors cursor-default">
-                    <Star className="w-3.5 h-3.5" />
+                    <Star className="w-3 sm:w-3.5 h-3 sm:h-3.5" />
                     <span>{project.stars}</span>
                   </div>
                   <div className="flex items-center gap-1 hover:text-foreground transition-colors cursor-default">
-                    <GitFork className="w-3.5 h-3.5" />
+                    <GitFork className="w-3 sm:w-3.5 h-3 sm:h-3.5" />
                     <span>{project.forks}</span>
                   </div>
                 </div>
