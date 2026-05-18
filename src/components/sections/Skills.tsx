@@ -50,7 +50,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 border-b border-border-github bg-background relative">
+    <section id="skills" className="py-16 md:py-24 border-b border-border-github bg-background relative">
       <div className="absolute top-1/2 right-10 w-[20rem] h-[20rem] bg-gold/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
