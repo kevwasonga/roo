@@ -66,7 +66,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background relative">
+    <section id="contact" className="py-16 md:py-24 bg-background relative">
       <div className="absolute top-1/3 left-10 w-[20rem] h-[20rem] bg-green/5 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,7 +152,7 @@ export default function Contact() {
 
           {/* Form Block (Right side) */}
           <div className="lg:col-span-7">
-            <div className="bg-card-bg border border-border-github rounded-xl p-6">
+            <div className="bg-card-bg border border-border-github rounded-xl p-4 sm:p-6">
               
               {/* Form Title */}
               <div className="border-b border-border-github pb-4 mb-6">
