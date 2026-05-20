@@ -5,40 +5,40 @@ import { Calendar, Building2, MapPin, Briefcase, ChevronRight } from "lucide-rea
 export default function Experience() {
   const experiences = [
     {
-      role: "Lead Data Scientist",
-      company: "Tech Insights AI",
-      location: "Nairobi, Kenya (Hybrid)",
-      period: "2023 - Present",
-      description: "Spearheading the data science division, designing enterprise-grade predictive analytics products, and leading a high-performing team of data scientists and machine learning engineers.",
+      role: "Volunteer Tutor (Statistics & Data Science)",
+      company: "Mount Kenya University",
+      location: "Thika, Kenya",
+      period: "Jan 2025 - Present",
+      description: "Providing tutoring services to university students in data science and statistics, improving their understanding of complex concepts.",
       bullets: [
-        "Architected and deployed a predictive retention model that lowered user churn by 14%, directly increasing monthly recurring revenue.",
-        "Oversee the transition of legacy monolithic data systems into a modern Spark & AWS Big Data pipeline, improving query times by 65%.",
-        "Lead the implementation of domain-specific Generative AI agents (RAG) that automated client report drafts, saving the operations team 15+ hours weekly.",
-        "Collaborate directly with C-suite executives to translate analytical insights into product roadmaps and strategic business growth."
+        "Develop tailored research plans and study materials to aid students in their academic projects and exam preparation.",
+        "Assist students in enhancing their academic performance and building confidence in statistical applications.",
+        "Tutor in statistical software including R and SPSS for hands-on data analysis coursework."
       ]
     },
     {
-      role: "Senior Machine Learning Engineer",
-      company: "StatBricks",
-      location: "Nairobi, Kenya",
-      period: "2021 - 2023",
-      description: "Focused on training, fine-tuning, and putting into production deep learning models and highly scalable ETL workflows for fintech clients.",
+      role: "Data & Finance Assistant (Attachment)",
+      company: "Kiambu County Government, Finance Department",
+      location: "Juja Sub-County, Kenya",
+      period: "Aug 2024 - Dec 2024",
+      description: "Performed financial analysis and reporting to support the department's monthly fiscal reviews and policy evaluations at the County Government of Kiambu.",
       bullets: [
-        "Designed and maintained automated MLOps pipelines using Kubeflow and Docker, streamlining model training, validation, and deployment phases.",
-        "Optimized deep learning training clusters on AWS EC2, reducing hardware runtime expenditures by 35% without model degradation.",
-        "Collaborated with product teams to build real-time REST and gRPC API endpoints for instantaneous transactions scoring and fraud prevention."
+        "Prepared and balanced cash book accounts, ensuring 100% accuracy in transaction recording and financial reconciliation.",
+        "Issued billing invoices for business permits and construction permits through the county revenue collection system.",
+        "Monitored and evaluated county economic trends to provide data-driven insights for policy review initiatives.",
+        "Played a key role in developing a Geographic Information System (GIS) and Land Information System (LIS) database for effective spatial data management."
       ]
     },
     {
-      role: "Data & Business Analyst",
-      company: "Zealtech Data Solutions",
-      location: "Mombasa, Kenya",
-      period: "2019 - 2021",
-      description: "Analyzed consumer behavior datasets and built business intelligence reporting dashboards for leading e-commerce platforms in East Africa.",
+      role: "Research Assistant",
+      company: "Mount Kenya University",
+      location: "Thika, Kenya",
+      period: "Feb 2024 - Jun 2024",
+      description: "Conducted a comprehensive research project analyzing factors influencing physical class attendance in universities in Kenya using Logistic Regression.",
       bullets: [
-        "Constructed complex SQL queries and ETL pipelines, automating manual reporting operations to cut compilation workflows from days to minutes.",
-        "Designed interactive corporate dashboards in Tableau and Streamlit, providing real-time sales performance metrics for over 50,000 active SKUs.",
-        "Designed and evaluated statistical A/B tests on landing pages, improving overall user registration conversion rate by 4.2%."
+        "Collected, cleaned, and analyzed datasets using R and SPSS to identify key trends and statistical significance.",
+        "Prepared and presented detailed reports and findings to academic staff, demonstrating strong analytical and communication skills.",
+        "Applied logistic regression modeling to identify statistically significant predictors of student attendance behavior."
       ]
     }
   ];
@@ -59,7 +59,7 @@ export default function Experience() {
             Professional Experience
           </h2>
           <p className="text-base text-text-muted">
-            A chronicle of my professional career, showcasing growth, projects led, and engineering milestones achieved.
+            A chronicle of my professional career, showcasing growth in statistical research, data analysis, and finance.
           </p>
         </div>
 
