@@ -49,7 +49,7 @@ export default function Navbar() {
                   RODRICKS.O
                 </span>
                 <span className="text-[8px] sm:text-[10px] text-text-muted font-sans leading-none">
-                  DATA SCIENTIST
+                  DATA ANALYST
                 </span>
               </div>
             </Link>
