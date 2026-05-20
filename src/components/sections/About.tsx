@@ -16,7 +16,7 @@ export default function About() {
             The Person Behind the Data
           </h2>
           <p className="text-base text-text-muted">
-            A quick introduction to who I am, what I do, and what drives my passion for data science.
+            A quick introduction to who I am, what I do, and what drives my passion for statistical analysis and data-driven research.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function About() {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-green/10 border border-green/30 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                <span className="text-green font-mono font-bold text-2xl">5+</span>
+                <span className="text-green font-mono font-bold text-sm text-center">BSc<br/>Stats</span>
               </div>
             </div>
           </div>
@@ -44,16 +44,18 @@ export default function About() {
                 Rodricks Otieno Ochieng
               </h3>
               <p className="text-text-muted leading-relaxed">
-                Data Scientist and AI specialist with over five years of experience transforming raw,
-                complex datasets into actionable business intelligence. I specialize in building
-                end-to-end machine learning pipelines, architecting scalable data infrastructures,
-                and deploying production-grade predictive models that drive measurable outcomes.
+                A meticulous and analytical Data Analyst with a Bachelor of Science in Statistics
+                (Second Class Honours - Upper Division) from Mount Kenya University. I possess proven
+                expertise in statistical modeling, data collection, and financial analysis using R,
+                SPSS, Advanced Excel, STATA, and GIS tools.
               </p>
               <p className="text-text-muted leading-relaxed">
-                My work sits at the intersection of statistical rigor and engineering pragmatism —
-                whether it is designing real-time fraud detection systems, optimizing deep learning
-                training clusters, or building interactive dashboards that make data accessible to
-                stakeholders at every level.
+                My experience includes an industrial attachment at the Kiambu County Department of
+                Finance, where I contributed to financial reporting, economic trend monitoring, and
+                database development. As a Research Assistant and Volunteer Tutor at Mount Kenya
+                University, I have strengthened my skills in statistical research, data analysis,
+                and academic mentorship. I hold certifications in Advanced Excel and Data Analytics
+                & SPSS.
               </p>
             </div>
 
@@ -73,7 +75,7 @@ export default function About() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-[9px] sm:text-[10px] text-text-muted font-mono uppercase">Role</p>
-                  <p className="text-xs sm:text-sm text-foreground font-medium truncate">Data Scientist</p>
+                  <p className="text-xs sm:text-sm text-foreground font-medium truncate">Data Analyst</p>
                 </div>
               </div>
               <div className="col-span-2 sm:col-span-1 flex items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-card-bg border border-border-github rounded-xl">
@@ -82,7 +84,7 @@ export default function About() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-[9px] sm:text-[10px] text-text-muted font-mono uppercase">Experience</p>
-                  <p className="text-xs sm:text-sm text-foreground font-medium">5+ Years</p>
+                  <p className="text-xs sm:text-sm text-foreground font-medium">BSc Statistics</p>
                 </div>
               </div>
             </div>
