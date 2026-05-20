@@ -39,7 +39,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: <GithubIcon className="w-5 h-5" />, href: "https://github.com/rodricks-ochieng", label: "GitHub" },
     { icon: <LinkedinIcon className="w-5 h-5" />, href: "https://linkedin.com/in/rodricks-otieno", label: "LinkedIn" },
-    { icon: <Mail className="w-5 h-5" />, href: "mailto:rodricks@example.com", label: "Email" },
+    { icon: <Mail className="w-5 h-5" />, href: "mailto:otienorodricks8@gmail.com", label: "Email" },
   ];
 
   return (
@@ -51,11 +51,11 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-2 mb-2">
               <span className="font-serif font-bold text-base text-white">
-                RODRICKS.O <span className="text-gold">/</span> DATA
+                RODRICKS.O <span className="text-gold">/</span> ANALYTICS
               </span>
             </div>
             <p className="text-xs text-gray-400 max-w-md font-sans">
-              Leveraging advanced analytics, machine learning, and predictive modeling to unlock insights and drive data-informed decisions.
+              Leveraging statistical analysis, data modeling, and research to unlock insights and drive data-informed decisions across organizations.
             </p>
           </div>
 
