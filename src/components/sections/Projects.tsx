@@ -22,14 +22,40 @@ const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const categories = ["All", "Machine Learning", "Data Engineering", "Generative AI", "Analytics"];
+  const categories = ["All", "Research & Analytics", "Machine Learning", "Data Engineering", "Finance & Reporting"];
 
   const projects = [
     {
+      title: "factors-influencing-class-attendance-logistic-regression",
+      category: "Research & Analytics",
+      description: "Conducted a comprehensive research project analyzing factors influencing physical class attendance in Kenyan universities using Logistic Regression in R and SPSS.",
+      longDescription: "Collected, cleaned, and analyzed primary survey data using R and SPSS. Applied logistic regression modeling to identify statistically significant predictors of student attendance behavior. Presented detailed findings and reports to academic staff.",
+      tech: ["R", "SPSS", "LaTeX", "Excel", "Survey Design"],
+      stars: 0,
+      forks: 0,
+      github: "#",
+      demo: "#",
+      metrics: "Significant Predictors Identified",
+      color: "bg-gold"
+    },
+    {
+      title: "kiambu-county-financial-revenue-analysis",
+      category: "Finance & Reporting",
+      description: "Performed financial analysis, reporting, and developed GIS/LIS database systems during industrial attachment at Kiambu County Government Finance Department.",
+      longDescription: "Prepared and balanced cash book accounts with 100% accuracy, issued billing invoices for permits, monitored county economic trends, and contributed to developing a GIS and Land Information System database for spatial data management.",
+      tech: ["Excel", "GIS", "SQL", "KOBO", "Financial Reporting"],
+      stars: 0,
+      forks: 0,
+      github: "#",
+      demo: "#",
+      metrics: "100% Reconciliation Accuracy",
+      color: "bg-green"
+    },
+    {
       title: "predictive-customer-churn-model",
       category: "Machine Learning",
-      description: "Designed and implemented an end-to-end customer churn prediction engine using XGBoost and lightGBM. Implemented SHAP (SHapley Additive exPlanations) for model interpretability, allowing the marketing team to target customers at risk of leaving.",
-      longDescription: "Achieved an AUC-ROC of 0.94. Integrated FastAPI endpoint in Docker containers to serve predictions with <20ms latency. The solution reduced active client churn by 14% over a six-month trial period.",
+      description: "Designed and implemented an end-to-end customer churn prediction engine using XGBoost and LightGBM with SHAP for model interpretability.",
+      longDescription: "Achieved an AUC-ROC of 0.94 with FastAPI endpoints serving predictions at under 20ms latency. The solution reduced active client churn by 14% over a six-month trial period.",
       tech: ["Python", "XGBoost", "FastAPI", "Docker", "Pandas", "Scikit-Learn"],
       stars: 48,
       forks: 12,
@@ -39,43 +65,17 @@ export default function Projects() {
       color: "bg-gold"
     },
     {
-      title: "realtime-fraud-detection-pipeline",
-      category: "Data Engineering",
-      description: "Engineered a high-throughput, real-time data streaming pipeline for credit card fraud detection. Leveraged Apache Kafka for streaming ingestion and PySpark Structured Streaming for real-time model evaluation.",
-      longDescription: "Processes over 5,000 transactions per second. Integrated a pre-trained deep learning fraud detection classifier, identifying malicious activity in under 50ms with a false positive rate of less than 0.1%.",
-      tech: ["Apache Kafka", "PySpark", "AWS S3", "TensorFlow", "Docker", "Scala"],
-      stars: 64,
-      forks: 22,
-      github: "https://github.com/rodricks-ochieng/fraud-pipeline",
-      demo: "#",
-      metrics: "5000+ Tx/Second",
-      color: "bg-yellow-600"
-    },
-    {
-      title: "financial-statement-llm-agent",
-      category: "Generative AI",
-      description: "Developed a Retrieval-Augmented Generation (RAG) agent specialized in extracting and summarizing complex financial statements and SEC filings using LangChain and GPT-4.",
-      longDescription: "Features vector database indexing (Pinecone) with semantic chunking to ensure highly accurate financial retrievals. Built an interactive Next.js chat interface for real-time querying, visual tabular parsing, and PDF report downloads.",
-      tech: ["Next.js", "FastAPI", "LangChain", "Pinecone", "GPT-4", "Tailwind CSS"],
-      stars: 104,
-      forks: 38,
-      github: "https://github.com/rodricks-ochieng/financial-rag",
-      demo: "https://example.com/rag",
-      metrics: "96% Retrieval Accuracy",
-      color: "bg-purple-600"
-    },
-    {
-      title: "marketing-mix-attribution-dashboard",
-      category: "Analytics",
-      description: "Built an advanced marketing mix modeling (MMM) and multi-touch attribution analysis dashboard using Bayesian regression (PyMC3) to optimize marketing spend allocation.",
-      longDescription: "Analyzed over $10M of ad spend data, optimizing allocations across 6 channels. The model provided actionable suggestions that boosted overall marketing return on investment (ROI) by 22% in Q3.",
-      tech: ["Python", "PyMC3", "Tableau", "SQL", "Pandas", "Streamlit"],
+      title: "marketing-mix-attribution-analysis",
+      category: "Research & Analytics",
+      description: "Built an advanced marketing mix modeling (MMM) and multi-touch attribution analysis using Bayesian regression to optimize marketing spend allocation.",
+      longDescription: "Analyzed over $10M of ad spend data across 6 channels using Bayesian regression methods. The analysis provided actionable insights that boosted marketing ROI by 22% in Q3.",
+      tech: ["Python", "PyMC3", "R", "SQL", "Pandas", "Tableau"],
       stars: 32,
       forks: 8,
       github: "https://github.com/rodricks-ochieng/marketing-mmm",
       demo: "#",
       metrics: "22% ROI Increase",
-      color: "bg-green"
+      color: "bg-purple-600"
     }
   ];
 
@@ -97,10 +97,10 @@ export default function Projects() {
               <span>Repositories & Case Studies</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-serif">
-              Featured Data Science Projects
+              Featured Projects & Research
             </h2>
             <p className="text-text-muted text-sm sm:text-base">
-              A curated collection of industry-grade data pipelines, machine learning systems, and AI models built with production scale in mind.
+              A curated collection of statistical research, data analysis projects, and analytical systems built with rigor and precision.
             </p>
           </div>
 
