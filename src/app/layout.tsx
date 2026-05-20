@@ -15,8 +15,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Rodricks Otieno Ochieng | Data Scientist & AI Specialist Portfolio",
-  description: "Professional portfolio of Rodricks Otieno Ochieng - Data Scientist. Specializing in advanced analytics, predictive modeling, machine learning, and data intelligence.",
+  title: "Rodricks Otieno Ochieng | Data Analyst & Statistician Portfolio",
+  description: "Professional portfolio of Rodricks Otieno Ochieng - Data Analyst & Statistician. Specializing in statistical modeling, data analysis, research, and data-driven decision making using R, SPSS, and Excel.",
 };
 
 export default function RootLayout({
