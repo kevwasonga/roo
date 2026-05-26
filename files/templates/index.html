@@ -1,0 +1,666 @@
+{% extends "base.html" %}
+{% block title %}Rodricks Analytics | Statistical Analysis · Research Consultancy · Data Insights{% endblock %}
+
+{% block content %}
+
+<!-- ══════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <!-- Animated data grid background -->
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+
+  <!-- Floating data labels -->
+  <div class="hero-data-labels">
+    <span class="data-label dl-1">p &lt; 0.001</span>
+    <span class="data-label dl-2">R² = 0.94</span>
+    <span class="data-label dl-3">n = 2,847</span>
+    <span class="data-label dl-4">β = 0.73***</span>
+    <span class="data-label dl-5">χ² = 24.6</span>
+    <span class="data-label dl-6">CI [0.68, 0.79]</span>
+    <span class="data-label dl-7">σ = 1.42</span>
+    <span class="data-label dl-8">μ = 3.87</span>
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <!-- Left: Content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span class="eyebrow-mono">RODRICKS ANALYTICS</span>
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="hl-line hl-1">Transform</span>
+        <span class="hl-line hl-2">
+          <span class="hl-data-word">
+            <span class="hl-d">D</span><span class="hl-ata">ATA</span>
+          </span>
+        </span>
+        <span class="hl-line hl-3">Into <span class="hl-accent">Intelligence</span></span>
+      </h1>
+
+      <p class="hero-tagline">Statistical Analysis &nbsp;·&nbsp; Research Consultancy &nbsp;·&nbsp; Data Insights</p>
+
+      <p class="hero-desc">
+        Evidence-based analytical solutions for organizations, institutions, researchers, businesses, and policy stakeholders. We decode complexity — one dataset at a time.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="cta-primary">
+          Start Your Analysis
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://wa.me/254794627947?text=Hello%20Rodricks%20Analytics!" target="_blank" class="cta-wa" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Mini live stats bar -->
+      <div class="hero-stats-bar">
+        <div class="hsb-item">
+          <span class="hsb-num" data-count="50">0</span><span class="hsb-suf">+</span>
+          <span class="hsb-label">Projects</span>
+        </div>
+        <div class="hsb-divider"></div>
+        <div class="hsb-item">
+          <span class="hsb-num" data-count="98">0</span><span class="hsb-suf">%</span>
+          <span class="hsb-label">Satisfaction</span>
+        </div>
+        <div class="hsb-divider"></div>
+        <div class="hsb-item">
+          <span class="hsb-num" data-count="15">0</span><span class="hsb-suf">+</span>
+          <span class="hsb-label">Yrs Experience</span>
+        </div>
+        <div class="hsb-divider"></div>
+        <div class="hsb-item">
+          <span class="hsb-num" data-count="100">0</span><span class="hsb-suf">%</span>
+          <span class="hsb-label">Evidence-Based</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Data Visualization Widget -->
+    <div class="hero-visual">
+      <div class="hv-card">
+        <div class="hv-card-header">
+          <span class="hv-dot r"></span><span class="hv-dot y"></span><span class="hv-dot g"></span>
+          <span class="hv-title">regression_analysis.r</span>
+        </div>
+        <div class="hv-body">
+          <!-- Animated bar chart -->
+          <div class="hv-chart">
+            <div class="hv-chart-label">Coefficient Plot</div>
+            <div class="hv-bars">
+              <div class="hv-bar-row">
+                <span class="hv-bar-name">Education</span>
+                <div class="hv-bar-track"><div class="hv-bar-fill" style="--w:82%;--d:0s"></div></div>
+                <span class="hv-bar-val">0.82***</span>
+              </div>
+              <div class="hv-bar-row">
+                <span class="hv-bar-name">Income</span>
+                <div class="hv-bar-track"><div class="hv-bar-fill" style="--w:71%;--d:0.1s"></div></div>
+                <span class="hv-bar-val">0.71***</span>
+              </div>
+              <div class="hv-bar-row">
+                <span class="hv-bar-name">Location</span>
+                <div class="hv-bar-track"><div class="hv-bar-fill" style="--w:59%;--d:0.2s"></div></div>
+                <span class="hv-bar-val">0.59**</span>
+              </div>
+              <div class="hv-bar-row">
+                <span class="hv-bar-name">Age</span>
+                <div class="hv-bar-track"><div class="hv-bar-fill neg" style="--w:34%;--d:0.3s"></div></div>
+                <span class="hv-bar-val neg">-0.34*</span>
+              </div>
+              <div class="hv-bar-row">
+                <span class="hv-bar-name">Gender</span>
+                <div class="hv-bar-track"><div class="hv-bar-fill" style="--w:46%;--d:0.4s"></div></div>
+                <span class="hv-bar-val">0.46**</span>
+              </div>
+            </div>
+          </div>
+          <!-- Metrics row -->
+          <div class="hv-metrics">
+            <div class="hv-metric">
+              <span class="hv-metric-val">0.847</span>
+              <span class="hv-metric-key">Nagelkerke R²</span>
+            </div>
+            <div class="hv-metric">
+              <span class="hv-metric-val">94.3%</span>
+              <span class="hv-metric-key">Classification</span>
+            </div>
+            <div class="hv-metric">
+              <span class="hv-metric-val">p&lt;.001</span>
+              <span class="hv-metric-key">Model Fit</span>
+            </div>
+          </div>
+          <!-- Code snippet -->
+          <div class="hv-code">
+            <span class="hvc-comment"># Logistic Regression — R</span><br>
+            <span class="hvc-fn">glm</span>(<span class="hvc-var">attendance</span> ~ <span class="hvc-var">education</span> +<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="hvc-var">income</span> + <span class="hvc-var">location</span>,<br>
+            &nbsp;&nbsp;&nbsp;data = <span class="hvc-str">student_data</span>,<br>
+            &nbsp;&nbsp;&nbsp;family = <span class="hvc-str">binomial</span>)<br>
+            <span class="hvc-cursor">█</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating badges -->
+      <div class="hv-badge hv-badge-1">
+        <i class="fas fa-check-circle"></i> Significant
+      </div>
+      <div class="hv-badge hv-badge-2">
+        <i class="fas fa-chart-line"></i> +47% Accuracy
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll-cue">
+    <span>Scroll to explore</span>
+    <div class="scroll-track"><div class="scroll-thumb"></div></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     ABOUT SECTION
+══════════════════════════════════════════ -->
+<section class="about section" id="about">
+  <div class="section-container">
+    <div class="about-grid">
+      <!-- Left: Visual identity card -->
+      <div class="about-card reveal">
+        <div class="about-card-bg"></div>
+        <div class="about-card-content">
+          <div class="about-logo-hero">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="about-svg">
+              <!-- Giant D with data visualization -->
+              <rect x="15" y="18" width="12" height="72" rx="2" class="as-bar as-bar-1"/>
+              <rect x="15" y="18" width="40" height="10" rx="2" class="as-bar as-bar-2"/>
+              <rect x="15" y="80" width="40" height="10" rx="2" class="as-bar as-bar-3"/>
+              <path d="M55 28 Q88 55 55 80" stroke-width="12" fill="none" stroke-linecap="round" class="as-arc"/>
+              <!-- Data scatter plot (right side) -->
+              <circle cx="90" cy="22" r="4" class="as-dot sd1"/>
+              <circle cx="102" cy="35" r="3" class="as-dot sd2"/>
+              <circle cx="96" cy="48" r="5" class="as-dot sd3"/>
+              <circle cx="108" cy="58" r="3" class="as-dot sd4"/>
+              <circle cx="94" cy="70" r="4" class="as-dot sd5"/>
+              <circle cx="104" cy="82" r="3" class="as-dot sd6"/>
+              <line x1="90" y1="22" x2="102" y2="35" class="as-line"/>
+              <line x1="102" y1="35" x2="96" y2="48" class="as-line"/>
+              <line x1="96" y1="48" x2="108" y2="58" class="as-line"/>
+              <line x1="108" y1="58" x2="94" y2="70" class="as-line"/>
+              <line x1="94" y1="70" x2="104" y2="82" class="as-line"/>
+            </svg>
+          </div>
+          <div class="about-card-text">
+            <span class="about-est">Est. 2024</span>
+            <h3 class="about-card-name">Rodricks<br>Analytics</h3>
+            <span class="about-card-tagline">Nairobi, Kenya</span>
+          </div>
+          <div class="about-card-tools">
+            <span>R</span><span>SPSS</span><span>STATA</span><span>JASP</span><span>GIS</span>
+          </div>
+        </div>
+        <div class="about-card-scan"></div>
+      </div>
+
+      <!-- Right: Text content -->
+      <div class="about-text reveal reveal-right">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-heading">Evidence-Based Analysis,<br><span class="sh-accent">Professional Integrity</span></h2>
+        <div class="sh-rule"></div>
+        <p>
+          <strong>Rodricks Analytics</strong> is a dedicated statistical analysis and research consultancy firm founded by <strong>Kev Wasonga</strong> (BSc Statistics, Mount Kenya University). We bring rigorous academic expertise combined with hands-on professional experience across data-intensive environments.
+        </p>
+        <p>
+          From logistic regression models to financial forecasting, survey instrument design to monitoring &amp; evaluation frameworks — we partner with institutions, researchers, businesses, and policy stakeholders to turn raw data into decisions that matter.
+        </p>
+
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-microscope"></i></div>
+            <div class="pillar-text">
+              <strong>Rigorous Analysis</strong>
+              <span>Statistical significance at every step</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="pillar-text">
+              <strong>Publication-Ready Reports</strong>
+              <span>Clear, professional deliverables</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-clock"></i></div>
+            <div class="pillar-text">
+              <strong>Timely Delivery</strong>
+              <span>Deadlines respected, quality maintained</span>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="pillar-text">
+              <strong>Data Integrity</strong>
+              <span>Ethical, transparent, accountable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SERVICES SECTION
+══════════════════════════════════════════ -->
+<section class="services section" id="services">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-heading">Our <span class="sh-accent">Services</span></h2>
+      <div class="sh-rule centered"></div>
+      <p class="section-sub">Comprehensive analytical solutions tailored to your research goals and strategic objectives.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card reveal reveal-delay-1">
+        <div class="svc-num">01</div>
+        <div class="svc-icon-wrap">
+          <div class="svc-icon"><i class="fas fa-chart-bar"></i></div>
+        </div>
+        <h3>Statistical Analysis</h3>
+        <p>Logistic regression, exploratory data analysis, hypothesis testing, and significance analysis. Using SPSS, R, STATA, and JASP for rigorous quantitative research with publication-quality reporting.</p>
+        <ul class="svc-list">
+          <li><i class="fas fa-angle-right"></i> Logistic &amp; Linear Regression</li>
+          <li><i class="fas fa-angle-right"></i> Hypothesis Testing</li>
+          <li><i class="fas fa-angle-right"></i> EDA &amp; Data Visualization</li>
+          <li><i class="fas fa-angle-right"></i> SPSS · R · STATA · JASP</li>
+        </ul>
+        <div class="svc-cta"><a href="#contact">Get a Quote <i class="fas fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card reveal reveal-delay-2 svc-featured">
+        <div class="svc-featured-badge">Most Requested</div>
+        <div class="svc-num">02</div>
+        <div class="svc-icon-wrap">
+          <div class="svc-icon"><i class="fas fa-search"></i></div>
+        </div>
+        <h3>Research Consultancy</h3>
+        <p>Expert guidance on proposal development, survey design, data collection strategy, academic analysis, and M&amp;E frameworks. Supporting researchers and institutions with evidence-based methodology.</p>
+        <ul class="svc-list">
+          <li><i class="fas fa-angle-right"></i> Research Proposal Development</li>
+          <li><i class="fas fa-angle-right"></i> Survey Design &amp; Management</li>
+          <li><i class="fas fa-angle-right"></i> M&amp;E Framework Design</li>
+          <li><i class="fas fa-angle-right"></i> Academic Thesis Support</li>
+        </ul>
+        <div class="svc-cta"><a href="#contact">Get a Quote <i class="fas fa-arrow-right"></i></a></div>
+      </div>
+
+      <div class="svc-card reveal reveal-delay-3">
+        <div class="svc-num">03</div>
+        <div class="svc-icon-wrap">
+          <div class="svc-icon"><i class="fas fa-chart-line"></i></div>
+        </div>
+        <h3>Financial &amp; Policy Analysis</h3>
+        <p>Revenue forecasting, financial statement analysis, budget tracking, and economic trend evaluation. Policy review, impact assessment, and data-driven recommendations for strategic planning.</p>
+        <ul class="svc-list">
+          <li><i class="fas fa-angle-right"></i> Revenue Forecasting</li>
+          <li><i class="fas fa-angle-right"></i> Financial Statement Analysis</li>
+          <li><i class="fas fa-angle-right"></i> Policy Impact Assessment</li>
+          <li><i class="fas fa-angle-right"></i> Economic Trend Analysis</li>
+        </ul>
+        <div class="svc-cta"><a href="#contact">Get a Quote <i class="fas fa-arrow-right"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CASE STUDIES
+══════════════════════════════════════════ -->
+<section class="cases section" id="case-studies">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Proven Track Record</span>
+      <h2 class="section-heading">Case <span class="sh-accent">Studies</span></h2>
+      <div class="sh-rule centered"></div>
+      <p class="section-sub">Analytical projects demonstrating rigorous research, strategic insights, and measurable impact.</p>
+    </div>
+
+    <div class="cases-grid">
+      <div class="case-card reveal reveal-delay-1">
+        <div class="case-top">
+          <span class="case-tag">Academic Research</span>
+          <span class="case-tool">R · Logistic Regression</span>
+        </div>
+        <div class="case-chart">
+          <!-- Mini inline bar chart -->
+          <div class="cc-bar" style="--h:65%"><span>Ed.</span></div>
+          <div class="cc-bar" style="--h:82%"><span>Inc.</span></div>
+          <div class="cc-bar" style="--h:45%"><span>Loc.</span></div>
+          <div class="cc-bar" style="--h:58%"><span>Age</span></div>
+          <div class="cc-bar" style="--h:73%"><span>Gen.</span></div>
+        </div>
+        <h4>University Attendance Analysis</h4>
+        <p>Logistic regression identifying 8 significant predictors of physical class attendance across Kenyan universities. 500+ student records, actionable institutional policy recommendations.</p>
+        <div class="case-meta">
+          <span><i class="fas fa-users"></i> 500+ Records</span>
+          <span><i class="fas fa-bullseye"></i> p &lt; 0.001</span>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-2">
+        <div class="case-top">
+          <span class="case-tag">Financial Monitoring</span>
+          <span class="case-tool">Excel · SPSS</span>
+        </div>
+        <div class="case-chart">
+          <div class="cc-bar alt" style="--h:55%"><span>Q1</span></div>
+          <div class="cc-bar alt" style="--h:70%"><span>Q2</span></div>
+          <div class="cc-bar alt" style="--h:62%"><span>Q3</span></div>
+          <div class="cc-bar alt" style="--h:88%"><span>Q4</span></div>
+          <div class="cc-bar alt" style="--h:76%"><span>Q5</span></div>
+        </div>
+        <h4>County Revenue Systems</h4>
+        <p>Financial statement analysis and cash book balancing for Kiambu County. Revenue tracking, transparency monitoring, and economic trend evaluation supporting sub-county planning.</p>
+        <div class="case-meta">
+          <span><i class="fas fa-building"></i> Kiambu County</span>
+          <span><i class="fas fa-chart-pie"></i> Multi-Quarter</span>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-3">
+        <div class="case-top">
+          <span class="case-tag">Spatial Analysis</span>
+          <span class="case-tool">GIS Systems</span>
+        </div>
+        <div class="case-chart case-map">
+          <div class="map-dot" style="--x:30%;--y:40%"></div>
+          <div class="map-dot" style="--x:55%;--y:25%"></div>
+          <div class="map-dot" style="--x:70%;--y:60%"></div>
+          <div class="map-dot" style="--x:20%;--y:65%"></div>
+          <div class="map-dot" style="--x:80%;--y:35%"></div>
+          <div class="map-line" style="--x1:30%;--y1:40%;--x2:55%;--y2:25%"></div>
+          <svg class="map-svg" viewBox="0 0 200 100"><path d="M20 80 Q50 20 80 60 Q110 30 140 50 Q170 40 190 55" fill="none" stroke="var(--c-cyan)" stroke-width="1.5" opacity="0.3"/></svg>
+        </div>
+        <h4>GIS &amp; Land Information Systems</h4>
+        <p>Design and development of spatial data management systems for land information. Database architecture supporting county planning and land administration decisions.</p>
+        <div class="case-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Spatial Data</span>
+          <span><i class="fas fa-database"></i> DB Architecture</span>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-1">
+        <div class="case-top">
+          <span class="case-tag">Survey Research</span>
+          <span class="case-tool">KoBO · ODK · SurveyCTO</span>
+        </div>
+        <div class="case-chart">
+          <div class="cc-bar" style="--h:77%"><span>Ag.</span></div>
+          <div class="cc-bar" style="--h:91%"><span>Hlth</span></div>
+          <div class="cc-bar" style="--h:64%"><span>Ed.</span></div>
+          <div class="cc-bar" style="--h:83%"><span>Gov.</span></div>
+          <div class="cc-bar" style="--h:52%"><span>Env.</span></div>
+        </div>
+        <h4>Multi-Wave Survey Analysis</h4>
+        <p>KOBO Toolbox / ODK data processing for large-scale institutional surveys. Statistical interpretation and evidence-based findings supporting organizational decision-making.</p>
+        <div class="case-meta">
+          <span><i class="fas fa-poll"></i> Multi-Wave</span>
+          <span><i class="fas fa-layer-group"></i> Large Scale</span>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-2">
+        <div class="case-top">
+          <span class="case-tag">Economic Planning</span>
+          <span class="case-tool">STATA · Excel</span>
+        </div>
+        <div class="case-chart case-line">
+          <svg viewBox="0 0 200 80" class="line-chart-svg">
+            <polyline points="10,65 40,55 70,48 100,38 130,30 160,22 190,15" fill="none" stroke="var(--c-cyan)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lc-line"/>
+            <polyline points="10,65 40,55 70,48 100,38 130,30 160,22 190,15" fill="url(#lineGrad)" opacity="0.15" class="lc-fill"/>
+            <defs>
+              <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--c-cyan)"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </linearGradient>
+            </defs>
+            <circle cx="190" cy="15" r="4" fill="var(--c-cyan)" class="lc-dot"/>
+          </svg>
+        </div>
+        <h4>Financial Forecasting</h4>
+        <p>Time-series analysis and financial modeling for multi-year revenue projections. Economic indicator analysis supporting budgeting, strategic planning, and policy recommendations.</p>
+        <div class="case-meta">
+          <span><i class="fas fa-calendar-alt"></i> Time-Series</span>
+          <span><i class="fas fa-trending-up"></i> Multi-Year</span>
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-3">
+        <div class="case-top">
+          <span class="case-tag">Academic Support</span>
+          <span class="case-tool">R · SPSS · Mentoring</span>
+        </div>
+        <div class="case-chart case-donut">
+          <svg viewBox="0 0 100 100" class="donut-svg">
+            <circle cx="50" cy="50" r="35" fill="none" stroke="var(--c-border)" stroke-width="12"/>
+            <circle cx="50" cy="50" r="35" fill="none" stroke="var(--c-cyan)" stroke-width="12" stroke-dasharray="198 22" stroke-dashoffset="55" class="donut-arc"/>
+            <text x="50" y="55" text-anchor="middle" class="donut-text">90%</text>
+          </svg>
+          <span class="donut-label">Pass Rate</span>
+        </div>
+        <h4>Academic Research Support</h4>
+        <p>Research methodology guidance, statistical analysis support, and thesis consultancy for university students. Publication-ready reporting through volunteer tutoring in statistics.</p>
+        <div class="case-meta">
+          <span><i class="fas fa-graduation-cap"></i> University Level</span>
+          <span><i class="fas fa-trophy"></i> 90% Pass Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cases-cta reveal">
+      <a href="https://wa.me/254794627947?text=Hello%20Rodricks%20Analytics!%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="cta-primary" rel="noopener">
+        Discuss Your Project <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     TECHNICAL EXPERTISE
+══════════════════════════════════════════ -->
+<section class="expertise section" id="expertise">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Tools &amp; Technologies</span>
+      <h2 class="section-heading">Technical <span class="sh-accent">Expertise</span></h2>
+      <div class="sh-rule centered"></div>
+      <p class="section-sub">Professional proficiency across leading statistical, analytical, and data management platforms.</p>
+    </div>
+
+    <div class="expertise-grid">
+      <div class="exp-card reveal reveal-delay-1">
+        <div class="exp-icon"><i class="fas fa-calculator"></i></div>
+        <h4>Statistical Software</h4>
+        <div class="exp-skills">
+          <div class="exp-skill"><span>R Programming</span><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div></div>
+          <div class="exp-skill"><span>SPSS (Advanced)</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div></div>
+          <div class="exp-skill"><span>STATA</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+          <div class="exp-skill"><span>JASP</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal reveal-delay-2">
+        <div class="exp-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h4>Data Collection</h4>
+        <div class="exp-skills">
+          <div class="exp-skill"><span>KoBO Toolbox</span><div class="skill-bar"><div class="skill-fill alt" style="--w:90%"></div></div></div>
+          <div class="exp-skill"><span>ODK Collect</span><div class="skill-bar"><div class="skill-fill alt" style="--w:88%"></div></div></div>
+          <div class="exp-skill"><span>SurveyCTO</span><div class="skill-bar"><div class="skill-fill alt" style="--w:82%"></div></div></div>
+          <div class="exp-skill"><span>Survey Design</span><div class="skill-bar"><div class="skill-fill alt" style="--w:93%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal reveal-delay-3">
+        <div class="exp-icon"><i class="fas fa-map"></i></div>
+        <h4>Data &amp; GIS</h4>
+        <div class="exp-skills">
+          <div class="exp-skill"><span>Advanced Excel</span><div class="skill-bar"><div class="skill-fill" style="--w:96%"></div></div></div>
+          <div class="exp-skill"><span>GIS Systems</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div></div>
+          <div class="exp-skill"><span>Database Design</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+          <div class="exp-skill"><span>Data Cleaning</span><div class="skill-bar"><div class="skill-fill" style="--w:94%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="exp-card reveal reveal-delay-4">
+        <div class="exp-icon"><i class="fas fa-brain"></i></div>
+        <h4>Analysis Methods</h4>
+        <div class="exp-skills">
+          <div class="exp-skill"><span>Logistic Regression</span><div class="skill-bar"><div class="skill-fill alt" style="--w:92%"></div></div></div>
+          <div class="exp-skill"><span>Exploratory Analysis</span><div class="skill-bar"><div class="skill-fill alt" style="--w:95%"></div></div></div>
+          <div class="exp-skill"><span>Policy Evaluation</span><div class="skill-bar"><div class="skill-fill alt" style="--w:85%"></div></div></div>
+          <div class="exp-skill"><span>M&amp;E Frameworks</span><div class="skill-bar"><div class="skill-fill alt" style="--w:88%"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why us strip -->
+    <div class="why-strip">
+      <div class="why-item reveal">
+        <div class="why-num">01</div>
+        <h5>Highly Qualified</h5>
+        <p>BSc Statistics with specialized expertise in research methodology, statistical modeling, and financial analytics.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-num">02</div>
+        <h5>Multi-Tool Proficiency</h5>
+        <p>Fluent across R, SPSS, STATA, JASP, Excel, GIS, KoBO, ODK, and SurveyCTO for any analytical challenge.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <div class="why-num">03</div>
+        <h5>Evidence-Based</h5>
+        <p>Every recommendation backed by solid data, proper statistical testing, and proven analytical methodology.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-3">
+        <div class="why-num">04</div>
+        <h5>Client-Focused</h5>
+        <p>Your analytical goals drive our work. Collaborative, tailored solutions with responsive communication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CONTACT SECTION
+══════════════════════════════════════════ -->
+<section class="contact section" id="contact">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-heading">Start Your <span class="sh-accent">Analysis</span></h2>
+      <div class="sh-rule centered"></div>
+      <p class="section-sub">Ready for data-driven insights? Reach out for a consultation on your analytical needs.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info reveal">
+        <h3>Let's Transform<br><span>Your Data</span></h3>
+        <p>We'd love to hear about your project. Contact us through any channel below — we respond promptly.</p>
+
+        <div class="ci-items">
+          <a href="tel:+254794627947" class="ci-item">
+            <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="ci-text">
+              <strong>Call Kev</strong>
+              <span>+254 794 627 947</span>
+            </div>
+          </a>
+          <a href="tel:+254773625138" class="ci-item">
+            <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="ci-text">
+              <strong>Call Support</strong>
+              <span>+254 773 625 138</span>
+            </div>
+          </a>
+          <a href="mailto:rodricks.analytics@gmail.com" class="ci-item">
+            <div class="ci-icon"><i class="far fa-envelope"></i></div>
+            <div class="ci-text">
+              <strong>Email</strong>
+              <span>rodricks.analytics@gmail.com</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="ci-wa-group">
+          <p class="ci-wa-label">Quick WhatsApp Consultation:</p>
+          <a href="https://wa.me/254794627947?text=Hello%20Rodricks%20Analytics!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank" class="btn-wa" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Kev — 0794 627 947
+          </a>
+          <a href="https://wa.me/254773625138?text=Hello%20Rodricks%20Analytics!%20I%27d%20like%20to%20inquire%20about%20your%20services." target="_blank" class="btn-wa" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Support — 0773 625 138
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-card reveal reveal-right">
+        <div class="cfc-header">
+          <span class="cfc-dot r"></span><span class="cfc-dot y"></span><span class="cfc-dot g"></span>
+          <span class="cfc-title">inquiry_form.py</span>
+        </div>
+        <form id="contactForm" action="/send_message" method="POST" class="cfc-form">
+          <div class="cfc-row">
+            <div class="cfc-field">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="cfc-field">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="cfc-row">
+            <div class="cfc-field">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="+254 7XX XXX XXX">
+            </div>
+            <div class="cfc-field">
+              <label>Service</label>
+              <select name="service" required>
+                <option value="">Select a service</option>
+                <option value="statistical-analysis">Statistical Analysis</option>
+                <option value="research-consultancy">Research Consultancy</option>
+                <option value="financial-analysis">Financial Analysis</option>
+                <option value="survey-analysis">Survey Analysis</option>
+                <option value="me-support">M&amp;E Support</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="cfc-field full">
+            <label>Project Details</label>
+            <textarea name="message" placeholder="Tell us about your data analysis project, research objectives, or questions..." required></textarea>
+          </div>
+          <button type="submit" class="cta-primary full-width">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

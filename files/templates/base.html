@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Rodricks Analytics | Statistical Analysis · Research Consultancy · Data Insights{% endblock %}</title>
+  <meta name="description" content="Rodricks Analytics — Professional statistical analysis, research consultancy, and data-driven insights. Transforming raw data into evidence-based decisions across Africa.">
+  <meta name="keywords" content="statistical analysis, research consultancy, data insights, SPSS, R programming, STATA, logistic regression, Kenya, Africa">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <svg class="preloader-svg" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+          <text x="2" y="68" class="pl-text-big">D</text>
+          <text x="52" y="68" class="pl-text-small">ATA</text>
+          <line x1="0" y1="75" x2="120" y2="75" class="pl-line" stroke-dasharray="120" stroke-dashoffset="120"/>
+        </svg>
+      </div>
+      <div class="preloader-scan"></div>
+      <p class="preloader-status"><span class="preloader-blink">_</span> Initializing analytics engine...</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <!-- D letterform as data bars -->
+            <rect x="8" y="10" width="6" height="36" rx="1" class="logo-bar logo-bar-1"/>
+            <rect x="16" y="16" width="5" height="24" rx="1" class="logo-bar logo-bar-2"/>
+            <rect x="8" y="10" width="20" height="5" rx="1" class="logo-cross-t"/>
+            <rect x="8" y="41" width="20" height="5" rx="1" class="logo-cross-b"/>
+            <path d="M28 15 Q44 28 28 41" stroke-width="5" fill="none" stroke-linecap="round" class="logo-arc"/>
+            <!-- mini data dots -->
+            <circle cx="38" cy="8" r="2.5" class="logo-dot d1"/>
+            <circle cx="45" cy="14" r="2" class="logo-dot d2"/>
+            <circle cx="42" cy="22" r="3" class="logo-dot d3"/>
+            <circle cx="48" cy="30" r="2" class="logo-dot d4"/>
+            <circle cx="44" cy="38" r="2.5" class="logo-dot d5"/>
+            <line x1="38" y1="8" x2="45" y2="14" class="logo-line"/>
+            <line x1="45" y1="14" x2="42" y2="22" class="logo-line"/>
+            <line x1="42" y1="22" x2="48" y2="30" class="logo-line"/>
+            <line x1="48" y1="30" x2="44" y2="38" class="logo-line"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">RODRICKS<span class="logo-accent"> ANALYTICS</span></span>
+          <span class="logo-sub">Statistics · Research · Data Analysis</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" {% if active_page=='home' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://wa.me/254794627947?text=Hello%20Rodricks%20Analytics!%20I'd%20like%20to%20inquire%20about%20your%20services." target="_blank" class="nav-wa" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Chat Now
+          </a>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>{% block content %}{% endblock %}</main>
+
+  <!-- Floating WhatsApp -->
+  <div class="fab-group">
+    <div class="fab-label">Contact Us</div>
+    <a href="https://wa.me/254794627947?text=Hello%20Rodricks%20Analytics!" target="_blank" class="fab fab-primary" rel="noopener" title="Kev — 0794 627947">
+      <i class="fab fa-whatsapp"></i>
+      <span class="fab-tooltip">Kev · 0794 627947</span>
+    </a>
+    <a href="https://wa.me/254773625138?text=Hello%20Rodricks%20Analytics!" target="_blank" class="fab fab-secondary" rel="noopener" title="Support — 0773 625138">
+      <i class="fab fa-whatsapp"></i>
+      <span class="fab-tooltip">Support · 0773 625138</span>
+    </a>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid-bg"></div>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo footer-logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <rect x="8" y="10" width="6" height="36" rx="1" class="logo-bar logo-bar-1"/>
+                <rect x="16" y="16" width="5" height="24" rx="1" class="logo-bar logo-bar-2"/>
+                <rect x="8" y="10" width="20" height="5" rx="1" class="logo-cross-t"/>
+                <rect x="8" y="41" width="20" height="5" rx="1" class="logo-cross-b"/>
+                <path d="M28 15 Q44 28 28 41" stroke-width="5" fill="none" stroke-linecap="round" class="logo-arc"/>
+                <circle cx="38" cy="8" r="2.5" class="logo-dot d1"/>
+                <circle cx="45" cy="14" r="2" class="logo-dot d2"/>
+                <circle cx="42" cy="22" r="3" class="logo-dot d3"/>
+                <circle cx="48" cy="30" r="2" class="logo-dot d4"/>
+                <circle cx="44" cy="38" r="2.5" class="logo-dot d5"/>
+                <line x1="38" y1="8" x2="45" y2="14" class="logo-line"/>
+                <line x1="45" y1="14" x2="42" y2="22" class="logo-line"/>
+                <line x1="42" y1="22" x2="48" y2="30" class="logo-line"/>
+                <line x1="48" y1="30" x2="44" y2="38" class="logo-line"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">RODRICKS<span class="logo-accent"> ANALYTICS</span></span>
+              <span class="logo-sub">Statistics · Research · Data Analysis</span>
+            </div>
+          </a>
+          <p>Professional statistical analysis and research consultancy transforming raw data into actionable insights for organizations, institutions, researchers, and policy stakeholders across Africa.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/254794627947" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:rodricks.analytics@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+            <a href="tel:+254794627947" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Statistical Analysis</a></li>
+            <li><a href="#services">Research Consultancy</a></li>
+            <li><a href="#services">Financial Analysis</a></li>
+            <li><a href="#services">Survey Analysis</a></li>
+            <li><a href="#services">M&amp;E Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-phone"></i><a href="tel:+254794627947">+254 794 627 947</a></li>
+            <li><i class="fas fa-phone"></i><a href="tel:+254773625138">+254 773 625 138</a></li>
+            <li><i class="far fa-envelope"></i><a href="mailto:rodricks.analytics@gmail.com">rodricks.analytics@gmail.com</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/254794627947" target="_blank">WhatsApp Consultation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rodricks Analytics. All rights reserved.</p>
+        <p class="footer-mono">Statistical Analysis · Research Consultancy · Data Insights</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>
